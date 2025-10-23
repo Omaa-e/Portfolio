@@ -15,23 +15,23 @@ const Navbar = ({ darkmode, toggleDarkmode }) => {
   return (
     <div className='fixed top-6 left-1/2 -translate-x-1/2 z-10 flex justify-center items-center '>
         {/* <div className='w-full flex justify-center items-center mt-10'> */}
-          <div className={`${expanded ? "w-[450px]" : "w-[240px]"} ${darkmode? "text-white bg-[#0A0A0A]" :  "text-black bg-white"} flex justify-between items-center px-4 py-2 rounded-full shadow-lg`}>
+          <div className={`${expanded ? "w-[430px]" : "w-[240px]"} ${darkmode? "text-white bg-[#0A0A0A]" :  "text-black bg-white"} flex justify-between items-center px-4 py-2 rounded-full shadow-lg  transition-all duration-300`}>
             {/* Initial */}
             <h1 className='text-xl font-bold'>CE.</h1>
             {/* Navigation Links */}
-            <div className={`${expanded ? "flex" : "hidden"} items-center gap-4 flex text-xs}`}>
-              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"} cursor-pointer`} href="">Home</a>
-              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"} cursor-pointer`} href="">About Me</a>
-              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"} cursor-pointer`} href="">Projects</a>
-              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"} cursor-pointer`} href="">Contact</a>
+            <div className={`${expanded ? "flex" : "hidden"} items-center gap-4 flex cursor-pointer text-xs}`}>
+              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"}`} href="">Home</a>
+              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"}`} href="">About Me</a>
+              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"}`} href="">Projects</a>
+              <a className={`${darkmode ? "text-white hover:text-[#7B466A]" : "text-black hover:text-[#9F6496]"}`} href="">Contact</a>
 
-              <button onClick={toggleDarkmode} className='p-2 '>
+              <button onClick={toggleDarkmode} className='p-2 cursor-pointer '>
                 {darkmode ? <RxSun className='w-6 h-6' /> : <HiOutlineMoon className='w-6 h-6' />}
               </button>
             </div>
             {/* Menu button */}
             <div onClick={toggleMenu}>
-              {expanded ? <HiOutlineX className='w-6 h-6' /> : <HiMenu className='w-6 h-6' />}
+              {expanded ? <HiOutlineX className='w-6 h-6 cursor-pointer' /> : <HiMenu className='w-6 h-6 cursor-pointer' />}
             </div>
           </div>
             
