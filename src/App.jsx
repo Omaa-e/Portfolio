@@ -4,25 +4,41 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Project from "./components/Project";
+import Email from "./components/Email";
 
 const App = () => {
   // ✅ When app loads, set default dark mode and remember user's last choice
   useEffect(() => {
-    document.documentElement.classList.add("dark"); // default to dark mode
+     const html = document.documentElement;
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme === "dark" || !storedTheme) {
+      html.classList.add("dark"); // dark is default
+    } else {
+      html.classList.remove("dark");
+    }
   }, []);
 
   // ✅ Toggle dark/light and store preference
   const toggleDarkmode = () => {
-    document.documentElement.classList.toggle("dark");
+    const html = document.documentElement;
+    if (html.classList.contains("dark")) {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
   };
 
   return (
     <Router>
       {/* Outer background and text color handled by Tailwind's dark: classes */}
-      <div className="min-h-screen transition-all duration-300 bg-white text-black dark:bg-[#0A0A0A] dark:text-white">
+      <div className="transition-all duration-300 bg-white text-[#111827] dark:bg-[#0A0A0A] dark:text-[#e5e7eb] w-full justify-center xl:shadow-xl">
         {/* This container keeps everything centered and evenly padded */}
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
-          {/* Navbar gets the toggle function */}
+        <div className="">
+           {/* Navbar gets the toggle function */}
           <Navbar toggleDarkmode={toggleDarkmode} />
 
           {/* Route section */}
@@ -33,13 +49,17 @@ const App = () => {
                 <>
                   <Hero />
                   <About />
+                  <Project/>
+                  <Email/>
+                  <Footer />
                 </>
               }
             />
           </Routes>
-
-          <Footer />
         </div>
+         
+
+         
       </div>
     </Router>
   );

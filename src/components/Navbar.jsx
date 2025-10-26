@@ -7,7 +7,8 @@ const Navbar = ({ toggleDarkmode }) => {
   const toggleMenu = () => setExpanded(!expanded);
 
   return (
-    <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center">
+   <div>
+     <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center mt-10">
       <div
         className={`${
           expanded ? "w-[410px]" : "w-[220px]"
@@ -54,6 +55,7 @@ const Navbar = ({ toggleDarkmode }) => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 
