@@ -35,7 +35,7 @@ const App = () => {
   return (
     <Router>
       {/* Outer background and text color handled by Tailwind's dark: classes */}
-      <div className="transition-all duration-300 bg-white text-[#111827] dark:bg-[#0A0A0A] dark:text-[#e5e7eb] w-full justify-center xl:shadow-xl">
+      <div className="transition-all duration-300 bg-white text-[#111827] dark:bg-[#0A0A0A] dark:text-[#e5e7eb] w-full px-6 lg:px-15">
         {/* This container keeps everything centered and evenly padded */}
         <div className="">
            {/* Navbar gets the toggle function */}
