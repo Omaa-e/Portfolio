@@ -1,2 +1,23 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* 1️⃣ Define the animation inside the @theme layer */
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.scroll-container {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.scroll-container:hover {
+    animation-play-state: paused;
+}
