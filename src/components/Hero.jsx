@@ -1,5 +1,7 @@
 import React from 'react'
 import img from '../assets/hero-portfolio.jpg'
+import { HiChevronRight } from "react-icons/hi";
+
 const Hero = () => {
   return (
     <div>
@@ -43,8 +45,8 @@ const Hero = () => {
               View my Resume
             </button>
 
-            <button className="rounded-full px-6 py-3 border border-transparent bg-gradient-to-r from-[#7B466A] to-[#9F6496] hover:opacity-90">
-              Hire Me
+            <button className="rounded-full block px-6 py-3 border border-transparent bg-gradient-to-r from-[#7B466A] to-[#9F6496] dark:bg-[#0f0f0f] hover:scale-110 hover:opacity-90 dark:hover:bg-gray-800 flex items-center justify-center">
+              Hire Me <span className="ml-2 w-4 h-4"><HiChevronRight /></span>
             </button>
           </div>
         </div>

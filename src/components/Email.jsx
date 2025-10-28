@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
+
 
 
 const Email = () => {
@@ -24,9 +26,22 @@ const Email = () => {
   const handleSubmit = (event) => {
     // prevents the page from refreshing on submit
     event.preventDefault();
-      // shows form data in console
-    console.log (formData);
-    alert('Form submitted successfully!')
+     emailjs.send(
+    'service_gcpy8fm', 
+    'template_ht942gl', 
+    formData,
+    'LCnH6ef55-OpO0cnv'
+  ).then(
+    (result) => {
+      console.log('Success:', result.text);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      alert('Email sent successfully!');
+    },
+    (error) => {
+      console.log('Error:', error.text);
+      alert('Something went wrong.');
+    }
+  );
   };
 
   return (
