@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { HiMenu, HiOutlineX, HiOutlineMoon } from "react-icons/hi";
 import { RxSun } from "react-icons/rx";
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = ({ toggleDarkmode }) => {
   const [expanded, setExpanded] = useState(false);
+  const[nav, setNav]= useState(false)
   const toggleMenu = () => setExpanded(!expanded);
+    const handleClick =() => setNav(!nav)
+
+    const handleClose = () => setNav(!nav)
+
 
   return (
    <div>
@@ -24,17 +30,36 @@ const Navbar = ({ toggleDarkmode }) => {
             expanded ? "flex" : "hidden"
           } items-center gap-4 text-sm cursor-pointer transition-all duration-300`}
         >
-          <a href="#" className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
-            Home
+          <a className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
+             <Link onClick={handleClose}
+                to="home" 
+                smooth={true}  
+                duration={500} 
+              >Home</Link>
           </a>
-          <a href="#" className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
-            About Me
+          <a className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
+           <Link onClick={handleClose}  
+                  to="about" 
+                  smooth={true} 
+                  offset={-200} 
+                  duration={500} 
+                >About</Link>
           </a>
-          <a href="#" className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
-            Projects
+          <a className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
+            <Link  onClick={handleClose}
+               to="projects" 
+               smooth={true} 
+               offset={-100} 
+               duration={500} 
+             >Projects</Link>
           </a>
-          <a href="#" className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
-            Contact
+          <a className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
+            <Link onClick={handleClose} 
+               to="contact" 
+               smooth={true}
+               offset={-50}  
+               duration={500} 
+             >Contact</Link>
           </a>
 
           {/* Dark Mode Toggle */}

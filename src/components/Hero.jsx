@@ -9,9 +9,12 @@ const Hero = () => {
       <div className="w-full flex flex-col lg:flex-row-reverse items-center lg:justify-center gap-10">
         {/* Image Section */}
         <div className='flex-1 hidden md:flex justify-end'>
-          <div className=" relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 bg-gradient-to-r from-border-[#9F6496] to-border-[#7B466A]">
+          <div className='relative w-72 h-72 md:w-80 md:h-80 '>
+             <div className="w-full h-full rounded-full overflow-hidden border-2 border-gradient-to-r from-[#9F6496] to-[#7B466A] p-1">
             <img src={img} className='w-full h-full object-cover' alt="Chioma Ekpetere" />
         </div>
+          </div>
+         
         </div>
         
 
