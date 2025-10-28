@@ -45,49 +45,57 @@ const Email = () => {
             </div>
           </div>
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className='mt-8'>
+          <form onSubmit={handleSubmit} className='px-4 rounded-lg space-y-4'>
               {/* Name */}
               <div>
-                <label htmlFor="name">Name</label>
+                <label className='mb-1 font-medium' htmlFor="name">Name</label>
                 <input type="text"
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
+                className='w-full px-4 py-2 rounded border mb-4 focus:border-[#804E74] focus:outline-none dark:bg-[#0f0f0f] border-gray-700'
                 required
                 />
               </div>
 
                {/* Email */}
               <div>
-                <label htmlFor="email">Email</label>
+                <label className='mb-1 font-medium' htmlFor="email">Email</label>
                 <input type="email"
                 name='email'
                 value={formData.email}
                 onChange={handleChange}
+                className='w-full px-4 py-2 rounded border mb-4 focus:border-[#804E74] focus:outline-none dark:bg-[#0f0f0f]  border-gray-700'
                 required
                 />
               </div>
 
                {/* Subject */}
               <div>
-                <label htmlFor="subject">Subject</label>
+                <label className='mb-1 font-medium' htmlFor="subject">Subject</label>
                 <input type="text"
                 name='subject'
                 value={formData.subject}
                 onChange={handleChange}
+                className='w-full px-4 py-2 rounded border border-gray-700 mb-4  dark:bg-[#0f0f0f] focus:border-[#804E74] focus:outline-none'
                 required
                 />
               </div>
+
                {/* Message */}
               <div>
-                <label htmlFor="message">Message</label>
-                <textarea className='w-full p-4 border  rounded-md' rows="4"
+                <label className='mb-1 font-medium' htmlFor="message">Message</label>
+                <textarea  rows="4"
                 name='message'
                 value={formData.message}
                 onChange={handleChange}
+                className='w-full px-4 py-2 rounded border mb-4 focus:border-[#804E74] focus:outline-none dark:bg-[#0f0f0f]  border-gray-700'
                 required
                 ></textarea>
               </div>
+              <button type='submit' className='w-full md:w-40 relative p-[1px] focus:outline-none bg-gradient-to-r from-[#9F6496] to-[#814D71] hover:scale-110 transition-transform rounded-full disabled:opacity-60'>
+                <span className='w-full block rounded-full font-semibold dark:bg-[#0f0f0f] py-3 transition-colors bg-white text-center'>Submit</span>
+              </button>
 
               
             </form>
