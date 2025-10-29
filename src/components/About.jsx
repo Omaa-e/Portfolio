@@ -35,7 +35,7 @@ const About = () => {
   ]
 
   return (
-    <div>
+    <div name='about'>
       <div className='max-w-7xl mx-auto'>
         <div className=" lg:pt-24 min-h-[60vh]">
           {/* About Me Section */}
@@ -57,7 +57,7 @@ const About = () => {
                     className="flex-shrink-0 rounded-xl bg-gray-50 dark:bg-[#1A1A23] w-28 h-28 flex flex-col items-center justify-center hover:scale-110 transition-transform shadow-md"
                   >
                     <img className="w-16 h-12 object-contain" src={about.image} alt={about.title} />
-                    <h1 className="text-sm mt-2">{about.title}</h1>
+                    <h1 className="text-sm mt-2 text-center font-medium font-mono">{about.title}</h1>
                   </div>
                 ))}
               </div>

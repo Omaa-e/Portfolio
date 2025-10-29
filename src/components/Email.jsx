@@ -45,7 +45,7 @@ const Email = () => {
   };
 
   return (
-    <div className='w-full min-h-screen py-20 lg:px-20 lg:min-h-[80vh]'>
+    <div name='contact' className='w-full min-h-screen py-20 lg:px-20 lg:min-h-[80vh]'>
         <div className='max-w-6xl mx-auto items-center md:items-start gap-16 grid grid-cols-1 lg:grid-cols-2'>
           <div className='px-6 md:px-0'>
             <h2 className='text-4xl font-bold mb-4'>Get in Touch</h2>

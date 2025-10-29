@@ -7,13 +7,14 @@ const Navbar = ({ toggleDarkmode }) => {
   const [expanded, setExpanded] = useState(false);
   const[nav, setNav]= useState(false)
   const toggleMenu = () => setExpanded(!expanded);
+
     const handleClick =() => setNav(!nav)
 
     const handleClose = () => setNav(!nav)
 
 
   return (
-   <div>
+   <div >
      <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center mt-10">
       <div
         className={`${
@@ -25,7 +26,7 @@ const Navbar = ({ toggleDarkmode }) => {
         <h1 className="text-xl font-bold mr-3">CE.</h1>
 
         {/* Nav Links */}
-        <div
+        <div 
           className={`${
             expanded ? "flex" : "hidden"
           } items-center gap-4 text-sm cursor-pointer transition-all duration-300`}
@@ -43,7 +44,7 @@ const Navbar = ({ toggleDarkmode }) => {
                   smooth={true} 
                   offset={-200} 
                   duration={500} 
-                >About</Link>
+                >About Me</Link>
           </a>
           <a className="hover:text-[#9F6496] dark:hover:text-[#7B466A]">
             <Link  onClick={handleClose}
@@ -71,7 +72,7 @@ const Navbar = ({ toggleDarkmode }) => {
         </div>
 
         {/* ☰ Menu Toggle */}
-        <div onClick={toggleMenu} className="outline-none">
+        <div onClick={() => { toggleMenu(); handleClick(); }} className="outline-none">
           {expanded ? (
             <HiOutlineX className="w-6 h-6 cursor-pointer" />
           ) : (
