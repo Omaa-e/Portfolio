@@ -51,7 +51,7 @@ const Email = () => {
             <h2 className='text-4xl font-bold mb-4'>Get in Touch</h2>
             {/* Email and Resume */}
             <p className='mb-4 text-lg'>Feel free to reach out to me on <a className='underline text-[#9F6496] dark:text-[#814D71] cursor-pointer' href="mailto:ekpeterechioma@gmail.com">ekpeterechioma@gmail.com</a></p>
-            <p className='mb-8'>For more info, here's my <a className='underline text-[#9F6496] dark:text-[#814D71] cursor-pointer' href="">Resume</a>.</p>
+            <p className='mb-8'>For more info, here's my <a className='underline text-[#9F6496] dark:text-[#814D71] cursor-pointer' href="/Chioma-Ekpetere.pdf" target="_blank" rel="noopener noreferrer">Resume</a>.</p>
 
               {/* Social Media Links */}
             <div className='flex gap-4 text-2xl '>
