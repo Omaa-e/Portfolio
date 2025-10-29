@@ -56,8 +56,7 @@ const Hero = () => {
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="rounded-full font-medium bg-white text-black hover:text-white border border-transparent hover:bg-gradient-to-r from-[#7B466A] to-[#9F6496] transition-all duration-200 px-8 py-3 dark:bg-[#0f0f0f] hover:scale-110 hover:opacity-90 dark:hover:bg-gray-800 flex items-center justify-center dark:text-white"
-              >
+                className="rounded-full font-medium bg-white text-black hover:text-white border border-transparent hover:bg-gradient-to-r from-[#7B466A] to-[#9F6496] transition-all duration-200 px-8 py-3 dark:bg-[#0f0f0f] hover:scale-110 hover:opacity-90 dark:hover:bg-gray-800 flex items-center justify-center dark:text-white">
                 Hire Me <span className="ml-2 w-4 h-4"><HiChevronRight /></span>
               </Link>
             

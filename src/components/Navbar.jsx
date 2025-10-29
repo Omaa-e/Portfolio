@@ -5,12 +5,12 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = ({ toggleDarkmode }) => {
   const [expanded, setExpanded] = useState(false);
-  const[nav, setNav]= useState(false)
+
+  // Toggle menu open/close
   const toggleMenu = () => setExpanded(!expanded);
 
-    const handleClick =() => setNav(!nav)
-
-    const handleClose = () => setNav(!nav)
+  // Close menu after clicking any link
+  const handleClose = () => setExpanded(false);
 
 
   return (
@@ -64,7 +64,8 @@ const Navbar = ({ toggleDarkmode }) => {
           </a>
 
           {/* Dark Mode Toggle */}
-          <button onClick={toggleDarkmode} className="p-2 cursor-pointer">
+          <button onClick={() => {toggleDarkmode();handleClose(); // closes navbar too
+            }} className="p-2 cursor-pointer">
             {/* Show moon in light mode, sun in dark mode */}
             <HiOutlineMoon className="w-6 h-6 block dark:hidden" />
             <RxSun className="w-6 h-6 hidden dark:block" />
@@ -72,7 +73,7 @@ const Navbar = ({ toggleDarkmode }) => {
         </div>
 
         {/* ☰ Menu Toggle */}
-        <div onClick={() => { toggleMenu(); handleClick(); }} className="outline-none">
+        <div onClick={toggleMenu} className="outline-none">
           {expanded ? (
             <HiOutlineX className="w-6 h-6 cursor-pointer" />
           ) : (
