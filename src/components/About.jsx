@@ -4,6 +4,7 @@ import img2 from '../assets/css.png'
 import img3 from '../assets/js logo.png'
 import img4 from '../assets/react.png'
 import img5 from '../assets/tailwindcss.png'
+import img6 from '../assets/bootstrap.png'
 
 const About = () => {
   const aboutData = [
@@ -31,6 +32,11 @@ const About = () => {
       id:5,
       image: img5,
       title: 'Tailwind CSS',
+    },
+    {
+      id:6,
+      image: img6,
+      title: 'Bootstrap',
     }
   ]
 
