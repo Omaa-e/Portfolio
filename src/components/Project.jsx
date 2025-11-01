@@ -5,7 +5,7 @@ import img1 from "../assets/restaurant work.png";
 import img2 from "../assets/brand work.png";
 import img3 from "../assets/netflix work.png";
 import img4 from "../assets/finance work.png";
-// import img5 from "../assets/projects/img5.png";
+import img5 from "../assets/vans workk.png";
 import { RiGithubFill } from "react-icons/ri";
 
 const Projects = () => {
@@ -19,7 +19,7 @@ const Projects = () => {
       image: img1,
       title: "Restaurant Website",
       description:
-        "A minimalistic, clean UI demo inspired by the Atomic Lite theme by GiantFocal, designed to showcase layout, typography, and aesthetic consistency.",
+        "A responsive restaurant website built with HTML, CSS, JavaScript, and Bootstrap, featuring a modern design, menu showcase, reservation form, and contact information to enhance user experience.",
       stack: ["HTML", "CSS", "JavaScript", "Bootstrap"],
       demoUrl: "#",
       githubUrl: "https://github.com/Omaa-e/restaurant",
@@ -30,7 +30,7 @@ const Projects = () => {
       image: img2,
       title: "Brand",
       description:
-        "A demo tech-themed UI built to showcase my frontend design skills, featuring a clean layout, smooth interactions, and a modern aesthetic.",
+        "A cloud management website clone built with ReactJS and TailwindCSS featuring responsive design and user-friendly UI components to enhance user experience.",
       stack: ["ReactJS", "TailwindCSS"],
       demoUrl: "https://cloud-management-clone.vercel.app/",
       githubUrl: "https://github.com/Omaa-e/cloud-management-clone",
@@ -41,34 +41,34 @@ const Projects = () => {
     image: img3,
     title: "Netflix Clone",
     description:
-    "A sleek, responsive website built for a car trading app, showcasing listings and app features with a clean, modern UI.",
-    stack: ["ReactJS", "TailwindCSS"],
+    "A Netflix clone built with ReactJS and TailwindCSS, featuring responsive design and dynamic content fetching from TMDB API to showcase popular movies and TV shows.",
+    stack: ["ReactJS", "TailwindCSS", "TMDB API"],
     demoUrl: "#",
-    githubUrl: "https://github.com/treasureaiyedun/bumbu-app",
-    status: "completed",
+    githubUrl: "https://github.com/Omaa-e/#",
+    status: "in-progress",
   },
     {
       id: 4,
       image: img4,
       title: "Finance Website",
       description:
-        "A business operations dashboard that combines invoicing, customer management, scheduling, and task tracking, designed for small to medium-sized companies, freelancers, or teams to manage their workflow efficiently.",
+        " A finance website built built with ReactJS and TailwindCSS from plum lunar server,a figma design, featuring responsive design and interactive UI components to enhance user experience.",
       stack: [ "TailwindCSS", "ReactJS"],
       demoUrl: "https://finance-kappa-lovat.vercel.app",
       githubUrl: "https://github.com/Omaa-e/finance-website",
       status: "Completed",
     },
-    // {
-    //   id: 5,
-    //   image: SplitPay,
-    //   title: "SplitPay",
-    //   description:
-    //   "SplitPay is a web-based application designed to simplify the process of dividing bills among multiple people, even when they are using different currencies.",
-    //   stack: ["ReactJs", "TailwindCSS"],
-    //   demoUrl: "https://split-pay-two.vercel.app/",
-    //   githubUrl: "https://github.com/Omaa-e/Vans-Clone",
-    //   status: "in-progress",
-    // }
+    {
+      id: 5,
+      image: img5,
+      title: "Vans Clone",
+      description:
+      "A cloned work to improve my skills using tailwind and reactJs to make a fully responsive, fully functional website",
+      stack: ["ReactJs", "TailwindCSS", "FastAPI"],
+      demoUrl: "#",
+      githubUrl: "https://github.com/Omaa-e/base",
+      status: "in-progress",
+    }
    
   ];
 
