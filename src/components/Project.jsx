@@ -139,7 +139,7 @@ const Projects = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="text-center mb-8 border-t border-gray-300 dark:border-gray-600 lg:pt-20">
+      <div name="projects" className="text-center mb-8 border-t border-gray-300 dark:border-gray-600 lg:pt-20">
         <h2 className="text-3xl font-semibold dark:text-white mt-8 mb-3 font-heading">
           Featured Projects 👩🏽‍🍳
         </h2>
