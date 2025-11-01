@@ -18,7 +18,7 @@ const Navbar = ({ toggleDarkmode }) => {
      <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center mt-10">
       <div
         className={`${
-          expanded ? "w-[410px]" : "w-[215px]"
+          expanded ? "w-[400px]" : "w-[220px]"
         } flex justify-between items-center p-2 rounded-full shadow-xl shadow-slate-900 
            transition-all duration-300 bg-white dark:bg-[#0A0A0A] text-black dark:text-white`}
       >
