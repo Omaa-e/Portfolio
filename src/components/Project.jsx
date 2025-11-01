@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ExternalLink, Clock, CheckCircle } from "lucide-react";
-import img1 from "../assets/restaurant work.png";
-import img2 from "../assets/brand work.png";
-import img3 from "../assets/netflix work.png";
-import img4 from "../assets/finance work.png";
-import img5 from "../assets/vans workk.png";
+import img1 from "../assets/restaurant-work.png";
+import img2 from "../assets/brand-work.png";
+import img3 from "../assets/netflix-work.png";
+import img4 from "../assets/finance-work.png";
+import img5 from "../assets/vans-workk.png";
 import { RiGithubFill } from "react-icons/ri";
 
 const Projects = () => {
