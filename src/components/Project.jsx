@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import img1 from '../assets/restaurant work.png'
 import img2 from '../assets/brand work.png'
 import img3 from '../assets/netflix work.png'
@@ -61,24 +61,37 @@ const Project = () => {
       liveDemo: 'https://your-live-demo.com',
       codeRepo: 'https://github.com/your-repo',
     }
-  ]
+  ];
+
+ const [index, setIndex] = useState(0);
+
+  const prevSlide = () => {
+    setIndex(index === 0 ? projects.length - 1 : index - 1);
+  };
+
+  const nextSlide = () => {
+    setIndex((index + 1) % projects.length);
+  };
+
   return (
     <div name='projects' className='max-w-7xl mx-auto py-10  '>
-      <div className='text-center mb-8 border-t border-gray-300 dark:border-gray-600 lg:pt-20 '>
-          <h2 className='text-3xl text-semibold mt-8 mb-3 text-[#111827] dark:text-white font-bold'>Featured Projects👩‍🍳🍽</h2>
-          <div className='w-24 h-1 bg-gradient-to-r from-[#9F6496] to-[#7B466A] mx-auto rounded-full'></div>  
+      <div className='text-center mb-8 border-t border-gray-300 dark:border-gray-600   lg:pt-20 '>
+        <h2 className='text-3xl text-semibold mt-8 mb-3 text-[#111827] dark:text-white font-bold'>Featured Projects👩‍🍳🍽</h2>
+        <div className='w-24 h-1 bg-gradient-to-r from-[#9F6496] to-[#7B466A] mx-auto rounded-full'></div>  
       </div>
       {/* Projects on small screens */}
       <div className='relative flex flex-col items-center md:hidden'>
         <div className='text-white dark:bg-[#0a0a0a] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-xl'>
           <img className='w-full h-56 object-cover' src={img1} alt="" />
           <div className='absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-medium border bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 border-green-200 dark:border-green-700 '>Completed</div>
+          {/* description area */}
           <div className='p-5 text-center'>
             <h3 className='text-lg font-semibold mb-2 text-gray-900 dark:text-white '>Restaurant</h3>
             <p className='text-sm text-gray-600 dark:text-gray-300 mb-4'>sdfghjkgfedsdfghtgrfdcvbgfcvbhgfvbhygfc vbgf</p>
             <div className='flex flex-wrap mb-5 justify-center gap-2'>
               <span className='text-[10px] font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md border border-gray-200 dark:border-gray-700'>html</span>
             </div>
+            {/* Tech Stack */}
             <div className='flex flex-col sm:flex-row justify-center gap-3 '>
               <a
                 href="https://your-live-demo.com"
@@ -95,26 +108,35 @@ const Project = () => {
           </div>
         </div>
       </div>
+
+
       {/* Projects on medium and large screens */}
       <div className='hidden md:flex items-center justify-center mb-6'>
-        <button className='p-2.5 bg-white dark:bg-black rounded-full shadow-lg hover:bg-gray-200 dark:hover:bg-gray-950'><LuChevronLeft className="text-rose-500" /></button>
-        <div className='mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
-        <div className='bg-white dark:bg-[#0f0f0f] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-xl relative'>
-          <img className='w-full h-52 object-cover cursor-pointer hover:scale-105 transition-transform duration-300' src={img1} alt="" />
+         <button className='p-2.5 bg-white dark:bg-black rounded-full shadow-lg hover:bg-gray-200 dark:hover:bg-gray-950'><LuChevronLeft className="text-rose-500" /></button>
+         <div  className='mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+          {projects.map((project, index) => {
+          return (
+           
+        <div key={project.id} className='bg-white dark:bg-[#0f0f0f] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-xl relative'>
+          <img className='w-full h-52 object-cover cursor-pointer hover:scale-105 transition-transform duration-300' src={project.img} alt="" />
           {/* to know if the project is complete or not */}
-          <div className='absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-medium border bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 border-green-200 dark:border-green-700'><IoMdCheckmarkCircleOutline className="w-3 h-3" />Completed</div>
+          <div className='absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-medium border bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 border-green-200 dark:border-green-700'><IoMdCheckmarkCircleOutline className="w-3 h-3" />{project.status ? "Completed" : "In Progress"}</div>
           {/* description */}
           <div className='p-5'>
-            <h3 className='text-lg font-semibold mb-2 text-[#111827] dark:text-white'>Restaurant Website</h3>
-            <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 text-sm'>A responsive restaurant website built with HTML, CSS, and JavaScript, featuring a menu, reservation system, and contact form.</p>
+            <h3 className='text-lg font-semibold mb-2 text-[#111827] dark:text-white'>{project.title}</h3>
+            <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 text-sm'>{project.description}</p>
               {/* tech programs */}
-            <div className='flex flex-wrap mb-5 gap-1/5 '>
-            <span className='text-[10px] font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md border border-gray-200 dark:border-gray-700'>html</span>
-            </div>
+             <div className='flex flex-wrap mb-5 gap-2'>
+                  {project.techStack.map((tech, i) => (
+                    <span key={i} className='text-[10px] font-medium bg-gray-100 dark:bg-[#1f1f1f] text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md border border-gray-200 dark:border-gray-700'>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
             {/* buttons */}
             <div className='grid gap-3'>
               <a
-                href="https://your-live-demo.com"
+                href={project.liveDemo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg bg-gradient-to-r from-[#7B466A] to-[#9F6496] p-[1px] inline-block"
@@ -125,12 +147,18 @@ const Project = () => {
               </a>
 
                 
-              <a href='https://github.com/Omaa-e/restaurant' className='flex items-center justify-center gap-2 bg-gray-100 dark:bg-[#232323] hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-600 transition'><FaGithub className="text-lg" /> Code</a>
+              <a href={project.codeRepo} className='flex items-center justify-center gap-2 bg-gray-100 dark:bg-[#232323] hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-600 transition'><FaGithub className="text-lg" /> Code</a>
               </div>
           </div>
-              
-        </div>
-        </div>
+           </div>
+           )
+      })}
+           </div>   
+        
+       
+       
+        
+        
       </div>
             
     </div>
