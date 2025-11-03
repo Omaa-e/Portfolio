@@ -11,3 +11,13 @@
         transform: translateX(-50%);
     }
 }
+
+.scroll-container {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.scroll-container:hover {
+    animation-play-state: paused;
+}
