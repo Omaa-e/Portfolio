@@ -45,9 +45,9 @@ const Hero = () => {
           <div className="flex flex-col lg:flex-row gap-4 lg:text-left text-white justify-center lg:justify-start">
             <button
               onClick={() => window.open('/Chioma-Ekpetere.pdf')}
-              className="px-6 py-3 bg-gradient-to-r from-[#9F6496] to-[#7B466A] rounded-full hover:opacity-90 font-medium cursor-pointer"
+              className="px-6 py-3  rounded-full font-medium bg-white text-black hover:text-white border border-[#9F6496] hover:bg-gradient-to-r from-[#7B466A] to-[#9F6496] transition-all duration-200 px-8 py-3 dark:bg-[#0f0f0f] dark:hover:bg-gray-800 flex items-center justify-center dark:text-white cursor-pointer"
             >
-              View my Resume
+              Download my Resume
             </button>
 
              

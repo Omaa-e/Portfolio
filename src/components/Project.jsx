@@ -141,9 +141,9 @@ const Projects = () => {
     >
       <div name="projects" className="text-center mb-8 border-t border-gray-300 dark:border-gray-600 lg:pt-20">
         <h2 className="text-3xl font-semibold dark:text-white mt-8 mb-3 font-heading">
-          Featured Projects 👩🏽‍🍳
+          Featured Projects 👩🏽🍽
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <div className="w-24 h-1 bg-gradient-to-r from-[#9F6496] to-[#7B466A] mx-auto rounded-full"></div>
       </div>
 
       {/* ✅ Desktop Layout (grid with side navs) */}
@@ -214,8 +214,8 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="relative flex items-center justify-center gap-2 px-4 py-2 text-gray-900 dark:text-white text-sm font-medium rounded-lg transition-transform transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
-                          <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 p-[1px]">
-                            <span className="block h-full w-full rounded-lg bg-white dark:bg-[#0a0a0a] hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors"></span>
+                          <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#9F6496] to-[#7B466A] p-[1px]">
+                            <span className="block h-full w-full rounded-lg bg-white dark:bg-[#0a0a0a] hover:bg-gradient-to-r hover:from-[#9F6496] hover:to-[#7B466A] hover:text-white transition-colors"></span>
                           </span>
 
                           <span className="relative z-10 flex items-center gap-2">
@@ -298,7 +298,7 @@ const Projects = () => {
                   href={currentProject.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-medium shadow-lg"
+                  className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#9F6496] to-[#7B466A] text-white rounded-lg text-sm font-medium shadow-lg"
                 >
                   <ExternalLink className="w-4 h-4" /> Live Demo
                 </a>

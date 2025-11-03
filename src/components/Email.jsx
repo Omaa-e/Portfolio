@@ -108,8 +108,8 @@ const Email = () => {
                 required
                 ></textarea>
               </div>
-              <button type='submit' className='w-full md:w-40 relative p-[1px] focus:outline-none bg-gradient-to-r from-[#814D71] to-[#7E2A53] hover:scale-110 transition-transform rounded-full disabled:opacity-60'>
-                <span className='w-full block rounded-full font-semibold dark:bg-[#0f0f0f] py-3 transition-colors bg-white text-center'>Submit</span>
+              <button type='submit' className='w-full md:w-40 relative p-[1px] focus:outline-none hover:scale-110 transition-transform rounded-full disabled:opacity-60'>
+                <span className='w-full block rounded-full font-semibold dark:bg-[#0f0f0f] py-3 transition-colors bg-white text-center bg-gradient-to-r from-[#814D71] to-[#7E2A53]'>Submit</span>
               </button>
 
               
